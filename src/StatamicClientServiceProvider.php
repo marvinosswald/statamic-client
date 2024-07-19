@@ -2,9 +2,9 @@
 
 namespace Marvinosswald\StatamicClient;
 
+use Marvinosswald\StatamicClient\Commands\StatamicClientCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Marvinosswald\StatamicClient\Commands\StatamicClientCommand;
 
 class StatamicClientServiceProvider extends PackageServiceProvider
 {
