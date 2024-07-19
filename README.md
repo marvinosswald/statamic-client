@@ -1,4 +1,4 @@
-# This package simplifies consuming external statamic installations from your laravel application.
+# Statamic Client
 
 
 
@@ -7,15 +7,14 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/marvinosswald/statamic-client/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/marvinosswald/statamic-client/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/marvinosswald/statamic-client.svg?style=flat-square)](https://packagist.org/packages/marvinosswald/statamic-client)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This package simplifies consuming external statamic installations from your laravel application.
 
-## Support us
+## Motivation
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/statamic-client.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/statamic-client)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+- I want my apps to be hosted using Octane which Statamic doesn't support
+- I don't want my application being "taken over" by Statamic
+- I love statamic and want to use it for my marketing pages and as a source for
+content pages within my app
 
 ## Installation
 
