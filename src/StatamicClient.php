@@ -12,12 +12,12 @@ class StatamicClient
 {
     public static function getPassThroughContent(string $slug): string
     {
-        try{
+        try {
             $response = self::getPassThroughContentFromHost($slug);
         } catch (StatamicClientException $e) {
             if (
-                !config("statamic-client.pass_through.fallback")
-                || !Cache::has(StatamicClientConfig::cacheKey("fallback-{$slug}"))
+                ! config('statamic-client.pass_through.fallback')
+                || ! Cache::has(StatamicClientConfig::cacheKey("fallback-{$slug}"))
             ) {
                 abort(404);
             }
@@ -42,10 +42,10 @@ class StatamicClient
 
         $response = Http::get($base.'/'.$slug);
         if (! $response->ok()) {
-            throw new StatamicClientException("Passthrough response wasn't ok: " . $response->toException()->getMessage());
+            throw new StatamicClientException("Passthrough response wasn't ok: ".$response->toException()->getMessage());
         }
 
-        if (config("statamic-client.pass_through.fallback")) {
+        if (config('statamic-client.pass_through.fallback')) {
             self::setFallback($slug, $response->body());
         }
 

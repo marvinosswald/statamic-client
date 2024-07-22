@@ -2,7 +2,4 @@
 
 namespace Marvinosswald\StatamicClient\Exceptions;
 
-class StatamicClientException extends \RuntimeException
-{
-
-}
+class StatamicClientException extends \RuntimeException {}

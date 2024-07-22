@@ -11,7 +11,7 @@ return [
         'cache' => [
             'enabled' => env('STATAMIC_PASSTHROUGH_CACHE_ENABLED', true),
             'ttl' => env('STATAMIC_PASSTHROUGH_CACHE_TTL', 600),
-            'prefix' => "statamic"
+            'prefix' => 'statamic',
         ],
     ],
     'discover' => [
