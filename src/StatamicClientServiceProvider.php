@@ -2,7 +2,7 @@
 
 namespace Marvinosswald\StatamicClient;
 
-use Marvinosswald\StatamicClient\Commands\StatamicClientCommand;
+use Marvinosswald\StatamicClient\Commands\StatamicDiscoverCollections;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -19,7 +19,7 @@ class StatamicClientServiceProvider extends PackageServiceProvider
             ->name('statamic-client')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_statamic_client_table')
-            ->hasCommand(StatamicClientCommand::class);
+            ->hasRoute('passthrough')
+            ->hasCommand(StatamicDiscoverCollections::class);
     }
 }

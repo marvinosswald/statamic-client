@@ -4,11 +4,11 @@ namespace Marvinosswald\StatamicClient\Commands;
 
 use Illuminate\Console\Command;
 
-class StatamicClientCommand extends Command
+class StatamicDiscoverCollections extends Command
 {
-    public $signature = 'statamic-client';
+    public $signature = 'statamic-client:discover';
 
-    public $description = 'My command';
+    public $description = 'Discover collections available on statamic host';
 
     public function handle(): int
     {

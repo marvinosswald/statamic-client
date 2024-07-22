@@ -9,12 +9,21 @@
 
 This package simplifies consuming external statamic installations from your laravel application.
 
+NOT PRODUCTION READ
+
 ## Motivation
 
 - I want my apps to be hosted using Octane which Statamic doesn't support
 - I don't want my application being "taken over" by Statamic
 - I love statamic and want to use it for my marketing pages and as a source for
 content pages within my app
+
+## Roadmap
+- Pass through views, needs specific setup on your statamic installation
+  - initial implementation done
+- Auto discover entries of specific collections
+- Load navigation from api
+- Load globals from api
 
 ## Installation
 
@@ -41,6 +50,16 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'host_url' => env("STATAMIC_HOST_URL"),
+    'pass_through' => [
+        "enabled" => env('STATAMIC_PASSTHROUGH_ENABLED', true),
+        "prefix" => "cms",
+        'middleware' => ["web"],
+        "view" => "statamic-client::pass-through"
+    ],
+    'discover' => [
+        'enabled' => env('STATAMIC_DISCOVER_ENABLED', true),
+    ]
 ];
 ```
 
