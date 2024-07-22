@@ -7,6 +7,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Cache;
 use Marvinosswald\StatamicClient\StatamicClient;
+use Marvinosswald\StatamicClient\StatamicClientConfig;
 
 class PageController extends Controller
 {
@@ -16,7 +17,7 @@ class PageController extends Controller
     public function viewPassThrough(string $slug)
     {
         if (config('statamic-client.pass_through.cache.enabled')) {
-            $body = Cache::remember("statamic-$slug", config('statamic-client.pass_through.cache.ttl'),
+            $body = Cache::remember(StatamicClientConfig::cacheKey($slug), config('statamic-client.pass_through.cache.ttl'),
                 fn () => StatamicClient::getPassThroughContent($slug)
             );
         } else {

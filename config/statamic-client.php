@@ -7,9 +7,11 @@ return [
         'prefix' => 'cms',
         'middleware' => ['web'],
         'view' => 'statamic-client::pass-through',
+        'fallback' => env('STATAMIC_PASSTHROUGH_FALLBACK_ENABLED', true),
         'cache' => [
             'enabled' => env('STATAMIC_PASSTHROUGH_CACHE_ENABLED', true),
             'ttl' => env('STATAMIC_PASSTHROUGH_CACHE_TTL', 600),
+            'prefix' => "statamic"
         ],
     ],
     'discover' => [
